@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Access Info</title>
+    <link rel="stylesheet" href="{% static "css/index1.css" %}">
+  </head>
+  <body>
+    <h1>Welcome to Django Framework</h1>
+    <h2>Here are your access records</h2>
+    <div class="django_class">
+      {% if acc_records %}
+       <table align=center>
+         <thead>
+           <th>Site Name</th>
+           <th>Date Accessed</th>
+
+         </thead>
+         <tr>
+           {% for acc in acc_records %}
+            <td>{{ acc.name }}</td>
+            <td>{{ acc.date }}</td>
+         </tr>
+         {% endfor %}
+
+      </table>
+        {% else %}
+          <p>Something is wrong, check the code!!</p>
+
+        {% endif %}
+
+
+    </div>
+
+  </body>
+</html>
