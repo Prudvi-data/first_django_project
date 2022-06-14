@@ -9,5 +9,9 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Tar files
         run: git archive -o latest.tar.gz HEAD
