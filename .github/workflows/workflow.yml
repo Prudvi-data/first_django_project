@@ -19,4 +19,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: my-artifact
-          path: latest.tar.gz
+          path: latest.zip
