@@ -1,0 +1,13 @@
+
+name : Publish package to artifactory
+
+on:
+  push:
+    branches: [ master,main ]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Tar files
+        run: git archive -o latest.tar.gz HEAD
