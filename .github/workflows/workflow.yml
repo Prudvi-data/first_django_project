@@ -14,7 +14,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Tar files
-        run: git archive -o latest.tar.gz HEAD
+        run: git archive -o latest.zip HEAD
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
